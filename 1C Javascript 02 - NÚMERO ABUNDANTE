@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numero;
+        let Abundantes = [];
+
+
+        function EsAbundante(n) {
+            let sumDivisores = 0;
+            for (let i = 1; i < n; i++) {
+                if (n % i === 0) {
+                    sumDivisores += i;
+                }
+            }
+            return sumDivisores > n;
+        }
+            
+
+            
+
+        numero = parseInt(prompt("ingrese un numero maximo"));
+
+        for (let i = 1; i <= numero; i++) {
+            if (EsAbundante(i)) {
+                Abundantes.push(i);
+            }
+
+        }
+
+        document.write("Los números abundantes encontrados desde &nbsp ",numero, "&nbsp son: " , Abundantes);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
