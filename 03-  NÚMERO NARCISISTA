@@ -1,0 +1,39 @@
+    <!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script src="narci.js"></script>
+</body>
+</html>
+    
+ ...................................................................................................................................................................   
+    
+    
+    let prueba = parseInt(prompt("NUMERO"));
+
+    function EsNarciso(num) {
+    let digitos = num.toString().split('');
+    let numDigitos = digitos.length;
+        potencia = 0;
+
+    for (let i = 0; i <numDigitos; i++) {
+        potencia += Math.pow(parseInt(digitos[i]),numDigitos);
+        
+    }
+
+        
+
+        document.write(digitos +"<br>")
+        document.write(numDigitos + "<br>");
+        document.write(potencia + "<br>");
+        
+        if (potencia == num) {
+            document.write("el numero "+ num +" es narciso")
+        }else{
+            document.write( num +" no es narciso")
+        }
+        
+    }
+
+    EsNarciso(prueba);
