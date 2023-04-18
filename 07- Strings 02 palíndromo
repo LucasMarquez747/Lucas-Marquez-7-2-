@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <script src="pali.js"></script>
+
+</body>
+</html>
+.......................................................................................................................................................................
+let palabra = prompt("ORACION PALINDROMA 1")
+let palabra1 = prompt("ORACION PALINDROMA 2")
+
+function polidro(n) {
+    let poli = n.replace(/\s/g,'').toLowerCase();
+    let texto = n.split('').reverse().join('').replace(/\s/g,'').toLowerCase();
+    
+    if (texto == poli) {
+        document.write( n +"-> SI es una horacion palindroma<br>")
+    }else{
+        document.write( n + "-> NO es una horacion palindroma<br>" )
+    }
+
+    
+
+    
+
+
+}
+
+polidro(palabra)
+polidro(palabra1)
+document.write("XXX <BR>")
+
