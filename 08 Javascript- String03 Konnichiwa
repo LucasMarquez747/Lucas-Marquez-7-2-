@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script src="konichi.js"></script>
+
+</body>
+</html>
+
+..............................................................................................................................................................................
+
+let nombre;
+let consonantes = ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z","B","C","D","F","G","H","J","K","L","M","N","P","Q","R","S","T","V","W","X","Y","Z"];
+do {
+    if (nombre !== null) {
+        nombre = prompt("DIGITE NOMBRES HASTA CANCELAR");
+
+
+        let nombre1 = nombre.split('');
+        let nombreJaponizado = '';
+
+        for (let i = 0; i < nombre1.length; i++) {
+            if (consonantes.includes(nombre1[i]) && consonantes.includes(nombre1[i+1])) {
+                nombreJaponizado += nombre1[i] + 'u';
+            } else {
+                nombreJaponizado += nombre1[i];
+            }
+        }
+
+        document.write("Nombre: " + nombre + "<br>");
+        document.write("Konnichi wa, " + nombreJaponizado + "-san" +"<br><br>");
+    }
+} while (nombre !== null);
