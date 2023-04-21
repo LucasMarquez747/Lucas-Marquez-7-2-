@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="bino.js"></script>
+</body>
+</html>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+let numeros = prompt("CADENA DE NUMEROS");
+let multiplos= [2,3,4,5];
+let sumContadorMultiplo2 = 0;
+let sumContadorMultiplo3 = 0;
+let sumContadorMultiplo4 = 0;
+let sumContadorMultiplo5 = 0;
+
+    let arrayNumeros = numeros.split(" ")
+    console.log(arrayNumeros)
+for (let i = 0; i < arrayNumeros.length; i++) {
+    for (let j = 0; j < multiplos.length; j++) {
+        
+        if ( arrayNumeros[i] % multiplos[j] ==0) {
+            switch (multiplos[j]) {
+                case 2:
+                    sumContadorMultiplo2++
+                    break;
+            
+                case 3:
+                        sumContadorMultiplo3++
+                        break;
+                case 4:   
+                       sumContadorMultiplo4++;
+                    break;
+                case 5:
+                       sumContadorMultiplo5++;
+                        break;
+
+c            }
+            
+
+
+}
+}
+}
+
+document.write("se encontro "+ sumContadorMultiplo2+" multiplos de 2 <br>")
+document.write("se encontro "+ sumContadorMultiplo3+" multiplos de 3 <br>")
+
+document.write("se encontro "+ sumContadorMultiplo4+" multiplos de 4 <br>")
+document.write("se encontro "+ sumContadorMultiplo5+" multiplos de 5<br>")
+
+
+
+
