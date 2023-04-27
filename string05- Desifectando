@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="infec.js"></script>
+</body>
+</html>
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+let infectado = prompt("PALABRA INFECTADA.").toLowerCase()
+let arrayInfectado = infectado.split('');
+let longitud = infectado.length;
+
+let digitos = prompt("ingrese letras a desinfectar [¿?] - [¿?] ").toLowerCase()
+let arrayDigitosIngresados = digitos.split(' ');
+
+document.write("Palabra Infectada : " +arrayInfectado.join('') +"<br>")
+document.write(longitud +" "+ arrayDigitosIngresados +"<br>")
+
+
+
+for (let i = 0; i < arrayInfectado.length; i++) {
+    if (arrayInfectado[i] == arrayDigitosIngresados[0] && arrayInfectado[i+1] == arrayDigitosIngresados[1] && arrayInfectado[i+2] == arrayDigitosIngresados[0]) {
+        arrayInfectado.splice(i+1, 1);
+        
+    } else {
+    }
+}
+
+document.write("<br> Palabra desinfectada : " + arrayInfectado.join(''));
+
+
+
+
+console.log(arrayDigitosIngresados)
