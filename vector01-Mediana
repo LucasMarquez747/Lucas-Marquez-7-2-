@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="mediana.js"></script>
+</body>
+</html>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+let numeros = prompt("cadena de numeros");
+let arrayNumeros = numeros.split(' ')
+arrayNumeros = arrayNumeros.sort((a, b) => a - b);
+
+for (let i = 0; i < arrayNumeros.length; i++) {
+    arrayNumeros[i] = parseInt(arrayNumeros[i])    
+}
+
+
+if (arrayNumeros.length % 2 == 0) {
+    let medianaPar = Math.floor(arrayNumeros.length / 1.8 * 2)
+    document.write("cadena :" + arrayNumeros+"<br>")
+    document.write("la mediana es: "+ medianaPar)
+
+}else{
+    let mediana = Math.floor((arrayNumeros.length - 1) / 2) 
+    document.write("cadena :" + arrayNumeros+"<br>")
+
+    document.write("la mediana es: "+arrayNumeros[mediana] * 2);
+}
+
+
+
+
+
+
